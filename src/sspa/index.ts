@@ -3,14 +3,15 @@
  * @Version: 0.1
  * @Author: EveChee
  * @Date: 2020-05-12 09:23:27
- * @LastEditTime: 2020-05-19 16:41:39
+ * @LastEditTime: 2020-05-20 19:11:26
  */
 import ActivesApp from './lib/ActivesApp'
 import EventBus from './lib/EventBus'
 import loader, { SSpaConfig, RegisterConfig } from './lib/LoadImport'
 
 type appName = string
-// 事件总站
+// 全局标记
+(<any>window).__SINGLE_SPA_MFE__ = true
 /**
  * @description: sspa初始化
  * @param {config:SSpaConfig}
