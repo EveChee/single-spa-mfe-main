@@ -34,5 +34,7 @@
   "dependencies": {
     "@types/systemjs": "^6.1.0",
     "single-spa": "^5.5.1"
-  }
+  },
+  "repository": "https://github.com/EveChee/single-spa-mfe-main",
+  "bugs": "https://github.com/EveChee/single-spa-mfe-main/issues"
 }
