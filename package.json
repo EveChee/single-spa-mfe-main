@@ -1,0 +1,38 @@
+{
+  "name": "single-spa-mfe-main",
+  "version": "1.0.0",
+  "description": "基于single-spa之上再封装的微前端库",
+  "main": "dist/index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc"
+  },
+  "keywords": [
+    "microfrontends",
+    "single",
+    "page",
+    "application",
+    "framework",
+    "vue",
+    "router",
+    "microservices",
+    "frontend"
+  ],
+  "author": "EveChee",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "prettier": "^2.0.5",
+    "ts-loader": "^7.0.4",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@types/systemjs": "^6.1.0",
+    "single-spa": "^5.5.1"
+  }
+}
