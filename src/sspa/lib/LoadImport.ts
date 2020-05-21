@@ -23,7 +23,7 @@ export interface RegisterConfig extends SSpaConfig {
     activesApp?: ActivesApp
 }
 
-class Loader {
+export class Loader {
     private static isStarted = false
     constructor() {
         /**
@@ -77,9 +77,7 @@ class Loader {
                 document.body.appendChild(ele)
             }
         }
-        return life.then(({ vueLifeCycles }) => {
-            return vueLifeCycles({ el, namespace: name })
-        })
+        return life.then(({ vueLifeCycles }) => vueLifeCycles({ el, namespace: name }))
     }
 
     /**

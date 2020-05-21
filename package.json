@@ -1,12 +1,13 @@
 {
   "name": "single-spa-mfe-main",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于single-spa之上再封装的微前端库",
   "main": "dist/index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "build": "tsc"
+    "build": "webpack --config webpack.config.js",
+    "test": "jest"
   },
   "keywords": [
     "microfrontends",
@@ -23,9 +24,14 @@
   "license": "MIT",
   "types": "dist/index.d.ts",
   "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.4",
     "clean-webpack-plugin": "^3.0.0",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
     "ts-loader": "^7.0.4",
+    "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
