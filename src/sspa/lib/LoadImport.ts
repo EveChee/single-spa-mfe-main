@@ -21,6 +21,8 @@ export interface RegisterConfig extends SSpaConfig {
     eventBus?: EventBus
     // 活跃管理
     activesApp?: ActivesApp
+    // 活跃路由
+    acFun?: ActivityFn
 }
 
 export class Loader {
@@ -47,7 +49,7 @@ export class Loader {
      */
     register(namespace: string, other?: RegisterConfig) {
         const name = comNames[namespace] || namespace
-        const afn = isActive[namespace] || this.routeMatch(namespace)
+        const afn = other?.acFun || isActive[namespace] || this.routeMatch(namespace)
         return registerApplication(
             name,
             () => this.configurableLoad({ el: `#${name}`, name, parent: other?.parent }),

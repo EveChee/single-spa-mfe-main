@@ -1,6 +1,6 @@
 {
   "name": "single-spa-mfe-main",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "基于single-spa之上再封装的微前端库",
   "main": "dist/index.js",
   "scripts": {
